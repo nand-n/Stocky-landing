@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: Muli-Bold;
+    src: url(./assets/Fonts/Muli-Bold.ttf)
+  }
+  @font-face {
+    font-family: Muli-BoldItalic;
+    src: url(./assets/Fonts/Muli-BoldItalic.ttf)
+  }
+  @font-face {
+    font-family: Muli-ExtraLight;
+    src: url(./assets/Fonts/Muli-ExtraLight.ttf)
+  }@font-face {
+    font-family: Muli-ExtraLightItalic;
+    src: url(./assets/Fonts/Muli-ExtraLightItalic.ttf)
+  }@font-face {
+    font-family: Muli-Italic;
+    src: url(./assets/Fonts/Muli-Italic.ttf)
+  }
+  @font-face {
+    font-family: Muli-Light;
+    src: url(./assets/Fonts/Muli-Light.ttf)
+  }
+  @font-face {
+    font-family: Muli-LightItalic;
+    src: url(./assets/Muli-LightItalic.ttf)
+  }
+  @font-face {
+    font-family: Muli-Semi-BoldItalic;
+    src: url(./assets/Fonts/Muli-Semi-BoldItalic.ttf)
+  }
+  @font-face {
+    font-family: Muli-SemiBold;
+    src: url(./assets/Fonts/Muli-SemiBold.ttf)
+  }
+  @font-face {
+    font-family: Muli;
+    src: url(./assets/Fonts/Muli.ttf)
+  }
+  @font-face {
+    font-family: PPGatwick-Bold;
+    src: url(./assets/Fonts/PPGatwick-Bold.otf)
+  }
+  @font-face {
+    font-family: PPGatwick-Ultralight;
+    src: url(./assets/Fonts/PPGatwick-Ultralight.otf)
+  }
+
+
+.fonty {
+    font-family: PPGatwick-Bold;
+    font-weight: bold;
+}
+
+.litefont{
+    font-family: Muli-Light;
+}
+.muli{
+  
+  font-family: Muli;
+}
