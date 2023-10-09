@@ -3,9 +3,9 @@ import Layout from "./Layout";
 import ExcelJS from "exceljs";
 import { BsDownload } from "react-icons/bs";
 
-function SellerPage() {
+function BuyerrPage() {
   // Initialize state to store seller data
-  const [sellers, setSellers] = useState([]);
+  const [buyers, setBuyers] = useState([]);
 
   // Dummy seller data
   const dummySellers = [
@@ -67,9 +67,9 @@ function SellerPage() {
   // Simulated data (replace with actual API calls)
   const fetchSellersData = async () => {
     // Replace this with your actual API endpoint to fetch seller data
-    const response = await fetch("/api/sellers");
+    const response = await fetch("/api/buyers");
     const data = await response.json();
-    setSellers(data);
+    setBuyers(data);
   };
 
   // Fetch seller data when the component mounts
@@ -79,7 +79,7 @@ function SellerPage() {
 
   const handleDownload = () => {
     const workbook = new ExcelJS.Workbook();
-    const worksheet = workbook.addWorksheet(`Sellers `);
+    const worksheet = workbook.addWorksheet(`Buyers `);
     const data = [
       ["Stocky"],
       [`List of Seller`],
@@ -210,7 +210,7 @@ function SellerPage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `Sellers-${Date.now()}.xlsx`;
+      a.download = `Buyers-${Date.now()}.xlsx`;
       a.click();
     });
   };
@@ -219,7 +219,7 @@ function SellerPage() {
     <Layout>
       <div className="p-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold py-2">Seller Page</h1>
+          <h1 className="text-2xl font-semibold mb-4">Buyer Page</h1>
 
           <button className="btnprimary" onClick={handleDownload}>
             <BsDownload size="24" color="white" />
@@ -265,4 +265,4 @@ function SellerPage() {
   );
 }
 
-export default SellerPage;
+export default BuyerrPage;

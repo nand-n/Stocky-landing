@@ -31,7 +31,7 @@ function Page404() {
         >
           <h1 className="text-2xl font-bold mt-4 mb-4">404 - Page Not Found</h1>
           <p className="text-gray-600 mb-8">
-            Oops! The page you're looking for doesn't exist.
+            Oops! The page you&lsquo;re looking for doesn&apos;t exist.
           </p>
           <Link
             to={"/"}

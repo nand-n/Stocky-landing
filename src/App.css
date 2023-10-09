@@ -28,9 +28,9 @@ ul{
 .btn {
   @apply bg-gray-800 hover:bg-gray-700 text-gray-100 font-medium px-7 py-1 mt-4 rounded transition-all hover:-translate-y-2 ;
 }
-/* .btnprimary{ 
-  @apply px-7 py-2 bg-[#817ED3] text-white rounded hover:bg-gray900 transition-all duration-300 hover:-translate-y-4;
-}  */
+.btnprimary{ 
+  @apply px-7 py-2 bg-[#817ED3] text-white rounded hover:bg-indigo-800 transition-all duration-300 hover:-translate-y-4;
+} 
 .active .step {
   @apply bg-sky-600 ;
 }
