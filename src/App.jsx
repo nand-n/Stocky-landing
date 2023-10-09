@@ -7,6 +7,9 @@ import Buyer from "./Components/Buyer";
 import Contattaci from "./Components/Contattaci";
 import Privacy from "./Components/Privacy";
 import UserPrivacy from "./Components/UserPrivacy";
+import Dashboard from "./Components/Dashboard";
+import Page404 from "./Components/Page404";
+import SellerPage from "./Components/Dashboard/Sellerpage";
 
 function App() {
   return (
@@ -20,6 +23,11 @@ function App() {
           <Route path="/Contattaci" element={<Contattaci />} />
           <Route path="/privacyuser" element={<Privacy />} />
           <Route path="/privacy" element={<UserPrivacy />} />
+          <Route path="/dashbord/overview" element={<Dashboard />} />
+          <Route path="/dashbord/sellerpage" element={<SellerPage />} />
+          <Route path="/dashbord/buyerpage" element={<Dashboard />} />
+          <Route path="/dashbord/overview" element={<Dashboard />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
     </div>

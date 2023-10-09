@@ -26,9 +26,9 @@ function SteperControl({ handleClick, currentStep, steps, formik, disable }) {
           }}
           className={`${
             disable
-              ? "bg-gray-50 hover:bg-gray-50"
-              : "bg-[#817ED3] hover:bg-indigo-900 "
-          } bg-[#817ED3] text-white uppercase py-2 px-4 rounded-xl font-semibold cursor-pointer border-2 hover:text-white transition duration-200 ease-in-out  
+              ? " bg-gray-50 hover:bg-gray-50  text-gray-500 cursor-not-allowed"
+              : "bg-[#817ED3] hover:bg-indigo-900  text-white "
+          }  uppercase py-2 px-4 rounded-xl font-semibold  border-2  transition duration-200 ease-in-out  
       `}
         >
           {currentStep === steps.length - 1 ? "Invia" : "Continua "}
