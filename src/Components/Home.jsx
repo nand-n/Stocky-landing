@@ -8,7 +8,7 @@ import Footerr from "./Footer";
 function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar isHome />
       <div className=" ">
         <Hero />
         <About />

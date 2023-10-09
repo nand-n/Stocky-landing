@@ -6,7 +6,7 @@ import { GrClose } from "react-icons/gr";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { Link } from "react-scroll";
 
-function Navbar() {
+function Navbar({ isHome }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsStickey] = useState(false);
 
@@ -56,17 +56,20 @@ function Navbar() {
           <a href="/">
             <img src={stocky} alt="logo" className="h-24 " />
           </a>
-          <ul className="md:flex space-x-12 hidden">
-            {navItems.map(({ link, path }, index) => (
-              <Link
-                to={path}
-                key={index}
-                className="block text-base text-gray-700 hover:text-gray-900 hover:font-bold  first:font-medium  cursor-pointer"
-              >
-                {link}
-              </Link>
-            ))}
-          </ul>
+          {isHome && (
+            <ul className="md:flex space-x-12 hidden">
+              {navItems.map(({ link, path }, index) => (
+                <Link
+                  to={path}
+                  key={index}
+                  className="block text-base text-gray-700 hover:text-gray-900 hover:font-bold  first:font-medium  cursor-pointer"
+                >
+                  {link}
+                </Link>
+              ))}
+            </ul>
+          )}
+
           {/* btn for larger devices  */}
           <div className="space-x-12 hidden lg:flex items-center">
             <HiMenuAlt1 size={24} />
