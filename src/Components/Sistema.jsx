@@ -31,7 +31,7 @@ function Sistema() {
                 <VscChecklist className="text-6xl" />
               </div>
             </div>
-            <p className="litefont text-center text-sm">
+            <p className="litefont text-center text-xl px-4">
               Su Stocky entrambe le parti sono tutelate da un sistema di
               autenticazione che garantisce massima fiducia tra le parti e una
               community di utenti affidabile.
@@ -56,7 +56,7 @@ function Sistema() {
                 />
               </div>
             </div>
-            <p className="litefont text-center text-sm">
+            <p className="litefont text-center text-xl px-4">
               Il nostro sistema di feedback permette di creare una comunità
               affidabile e di fornire importanti informazioni sulle parti in
               questione.
@@ -81,7 +81,7 @@ function Sistema() {
                 />
               </div>
             </div>
-            <p className="litefont text-center text-sm">
+            <p className="litefont text-center text-xl px-4">
               La comunicazione tra acquirenti e venditori può essere
               semplificata grazie all&apos;utilizzo della chat, permettendo
               un&apos;esperienza interattiva e personalizzata.

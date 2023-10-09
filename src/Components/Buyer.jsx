@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Steper from "./Partials/Steper";
 import SteperControl from "./Partials/SteperControl";
 import Account from "./Partials/Steps/Account";
@@ -46,8 +46,8 @@ function Buyer() {
       altro: false,
     },
     validationSchema: BuyerSchema,
-    validateOnChange: false,
-    validateOnBlur: false,
+    // validateOnChange: false,
+    // validateOnBlur: false,
   });
   const [currentStep, setCurrentStep] = useState(1);
   const [userData, setUserData] = useState("");
@@ -73,6 +73,19 @@ function Buyer() {
 
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
   };
+  const [disable, setDisable] = useState(true);
+
+  useEffect(() => {
+    if (
+      formik?.values?.name !== "" &&
+      formik?.values?.email !== "" &&
+      formik?.values?.cognome !== ""
+    ) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [formik]);
   return (
     <div className="md:w-2/4 mx-auto shadow-sm rounded-2xl pb-2 bg-white pt-24 ">
       <Navbar />
@@ -98,12 +111,13 @@ function Buyer() {
         handleClick={handleClick}
         currentStep={currentStep}
         steps={steps}
+        disable={disable}
       />
-      <p className="litefont text-xs text-center  px-8">
+      <p className="litefont text-xs text-center px-8">
         Inviando il modulo, confermi di aver letto la nostra{" "}
         <Link
           className="underline text-sm font-semibold text-indigo-600"
-          to={"/privacyuser"}
+          to={"/privacy"}
         >
           Informativa sulla Privacy{" "}
         </Link>{" "}

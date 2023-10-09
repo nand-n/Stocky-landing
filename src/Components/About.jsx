@@ -24,20 +24,20 @@ function About() {
             <div className="my-4 mb-8 space-y-4 ">
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black " size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-lg">
                   Accedi ai migliori brand e stock di merce invenduta e
                   verificata
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-lg">
                   Acquista in sicurezza da venditori registrati e autorizzati
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-lg">
                   Ottieni supporto logistico e assistenza post vendita
                   dall’inizio alla fine, zero sorprese
                 </p>
@@ -59,26 +59,26 @@ function About() {
         id={"vendi"}
       >
         <div className="mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-8 md:gap-12">
-          <div className="md:w-1/2 col-span">
-            <h2 className="fonty text-3xl md:text-4xl text-neutralGray font-semibold mb-4 md:w-4/5">
+          <div className="md:w-1/2 col-span items-center ">
+            <h2 className="fonty text-3xl md:text-4xl text-neutralGray  font-semibold mb-4 md:w-4/5">
               Stocky per chi vende
             </h2>
-            <div className="my-4 space-y-4 mb-8">
+            <div className="my-4 space-y-4 mb-8 grid items-center ml-1/3 text-center">
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-xl">
                   Accedi ad un vastissimo network di acquirenti
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-lg">
                   Vendi con rapidità, riducendo drasticamente costi e tempi
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
-                <p className="litefont text-sm">
+                <p className="litefont text-lg">
                   Ottieni liquidità istantanea e riappropriati finalmente del
                   tuo tempo
                 </p>

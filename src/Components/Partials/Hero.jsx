@@ -7,10 +7,7 @@ import { staggerContainer } from "../../Common/motion";
 
 function Hero() {
   return (
-    <div
-      className="h-screen bg-indigo px-8 md:px-14 md:mt-8 lg:mt-12 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:justify-between my-4 md:my-8 py-4 md:py-12 overflow-x-hidden"
-      id="acquista"
-    >
+    <div className="h-screen bg-indigo px-8 md:px-14 md:mt-8 lg:mt-12 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:justify-between my-4 md:my-8 py-4 md:py-12 overflow-x-hidden">
       {/* Hero Text */}
       <div className="w-full md:w-2/4 mt-20 md:mt-0">
         <h1 className="fonty text-2xl md:text-5xl font-bold mb-2 md:mb-4 text-neutral-900 leading-snug">

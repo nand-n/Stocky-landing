@@ -56,6 +56,7 @@ function Account({ yup, formik, isvenditore }) {
             errorClassName="border focus:outline-none w-full px-4 text-[12px] text-black border-red-500 h-10 md:ml-4"
             errorDisplayClassName="text-[12px] text-red-500"
           />
+          {/* {formik.touched.email && formik.errors.email ? <div className="error">{formik.errors.email}</div> : null} */}
         </div>
       </div>
 
