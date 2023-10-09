@@ -185,7 +185,7 @@ function Seller() {
       case 1:
         return <Account formik={formik} yup={BuyerSchema} isvenditore />;
       case 2:
-        return <Details formik={formik} yup={BuyerSchema} />;
+        return <Details formik={formik} yup={BuyerSchema} isvenditore />;
       case 3:
         return <Final />;
       default:

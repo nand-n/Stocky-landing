@@ -3,12 +3,14 @@ import React from "react";
 import { Checkbox } from "../Checkbox";
 import { Link } from "react-router-dom";
 
-function Details({ yup, formik, isAcquistare }) {
+function Details({ yup, formik, isvenditore }) {
   return (
     <div className=" bg-gray-200 rounded-lg shadow-lg pb-12">
       <div className="flex justify-between items-center p-4 mb-6">
         <div className="text-lg text-black font-semibold">
-          Registrati come acquirente
+          {isvenditore
+            ? "Registrati come Venditore "
+            : "Registrati come acquirente"}
         </div>
         <div className="px-4 py-2 flex items-end space-x-3">
           {/* <button
@@ -28,13 +30,10 @@ function Details({ yup, formik, isAcquistare }) {
       <div className="flex flex-col  items-center mb-2">
         <div className="col-span ">
           <div className="text-center mb-4 text-xl font-normal">
-            {isAcquistare ? (
-              <p>
-                Cosa ti piacerebbe acquistare{" "}
-                <span className="text-red-700">*</span>
-              </p>
+            {isvenditore ? (
+              <p>Cosa ti piacerebbe Venditore? </p>
             ) : (
-              <p> Cosa ti piacerebbe vendere?</p>
+              <p> Cosa ti piacerebbe Acquistare *</p>
             )}
           </div>
           <div className="w-full h-full border p-10 border-black rounded-lg ">
