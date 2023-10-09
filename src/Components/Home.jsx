@@ -7,13 +7,15 @@ import Footerr from "./Footer";
 
 function Home() {
   return (
-    <div className="bg-indigo px-4 py-0  lg:px-14 w-full h-full ">
+    <>
       <Navbar />
-      <Hero />
-      <About />
-      <Sistema />
-      <Footerr />
-    </div>
+      <div className=" ">
+        <Hero />
+        <About />
+        <Sistema />
+        <Footerr />
+      </div>
+    </>
   );
 }
 

@@ -11,15 +11,15 @@ TiMessages;
 function Sistema() {
   return (
     <div
-      className="px-4 lg:px-14  mx-auto my-8  mt-28 bg-gray-50"
-      name="contattaci"
+      className="px-4 py-4 md:py-8 lg:px-14 mx-auto my-8  mt-28 bg-gray-50"
+      id="contattaci"
     >
       <div className="flex justify-center  ">
         <div className="fonty text-4xl md:text-6xl text-neutralGray font-semibold mb-8 md:w-4/5 text-center  ">
           Un sistema sicuro
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 px-4 md:px-16">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 px-4 md:px-16 md:mt-8 ">
         {/* Card 1 */}
         <div className="md:w-1/3 shadow-md rounded-lg">
           <div className="p-4 max-w-[400px] w-full">
@@ -43,7 +43,7 @@ function Sistema() {
         <div className="md:w-1/3 shadow-md rounded-lg">
           <div className="p-4 max-w-[400px] w-full">
             <h1 className="text-xl font-bold mb-4 text-center">
-              VERIFICA AUTENTICITÀ
+              SISTEMA DI RECENSIONI
             </h1>
             <div className="bg-[#F0F0FA] rounded-lg p-8 mb-4">
               <div className="flex justify-center text-center">

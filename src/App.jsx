@@ -10,7 +10,7 @@ import UserPrivacy from "./Components/UserPrivacy";
 
 function App() {
   return (
-    <div className="max-w-screen overflow-x-hidden w-screen h-screen ">
+    <div className=" ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,8 +18,8 @@ function App() {
           <Route path="/seller" element={<Seller />} />
           <Route path="/buyer" element={<Buyer />} />
           <Route path="/Contattaci" element={<Contattaci />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/privacyuser" element={<UserPrivacy />} />
+          <Route path="/privacyuser" element={<Privacy />} />
+          <Route path="/privacy" element={<UserPrivacy />} />
         </Routes>
       </BrowserRouter>
     </div>

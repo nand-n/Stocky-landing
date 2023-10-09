@@ -59,7 +59,7 @@ function Buyer() {
       case 1:
         return <Account formik={formik} yup={BuyerSchema} />;
       case 2:
-        return <Details formik={formik} yup={BuyerSchema} />;
+        return <Details formik={formik} yup={BuyerSchema} isAcquistare />;
       case 3:
         return <Final />;
     }

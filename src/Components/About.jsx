@@ -7,11 +7,8 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="mb-8">
-      <div
-        className="px-4 lg:px-14 max-w-screen-2xl bg-gray-50 mx-auto my-4 md:my-8 mt-8 lg:mt-28 h-screen  grid items-center"
-        id="acquista"
-      >
+    <div className="mb-8" id="acquista">
+      <div className="px-4 lg:px-14 max-w-screen-2xl bg-gray-50 mx-auto my-4 md:my-8 mt-8 lg:mt-28 h-screen  grid items-center">
         <div className="mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-8 md:gap-12">
           <div className="md:w-2/5 col-span">
             <img
@@ -28,20 +25,21 @@ function About() {
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black " size={12} />
                 <p className="litefont text-sm">
-                  Accedi ad un vastissimo network di acquirenti
+                  Accedi ai migliori brand e stock di merce invenduta e
+                  verificata
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
                 <p className="litefont text-sm">
-                  Vendi con rapidità, riducendo drasticamente costi e tempi
+                  Acquista in sicurezza da venditori registrati e autorizzati
                 </p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaCircle className="text-black" size={12} />
                 <p className="litefont text-sm">
-                  Ottieni liquidità istantanea e riappropriati finalmente del
-                  tuo tempo
+                  Ottieni supporto logistico e assistenza post vendita
+                  dall’inizio alla fine, zero sorprese
                 </p>
               </div>
             </div>
@@ -58,7 +56,7 @@ function About() {
 
       <div
         className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-4 md:my-8 mt-4 lg:mt-28"
-        id="vendi"
+        id={"vendi"}
       >
         <div className="mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-8 md:gap-12">
           <div className="md:w-1/2 col-span">

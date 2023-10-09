@@ -8,7 +8,7 @@ function SteperControl({ handleClick, currentStep, steps }) {
       <button
         onClick={() => handleClick("back")}
         className={`bg-[#817ED3] text-white uppercase py-2 px-4 rounded-xl font-semibold cursor-pointer border-2  hover:bg-indigo-900 hover:text-white transition duration-200 ease-in-out 
-        ${currentStep === 1 ? "opacity-100 cursor-not-allowed" : " "}
+        ${currentStep === 1 ? "opacity-0 cursor-not-allowed" : " "}
         `}
       >
         Back

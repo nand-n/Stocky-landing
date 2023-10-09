@@ -3,7 +3,7 @@ import React from "react";
 import { Checkbox } from "../Checkbox";
 import { Link } from "react-router-dom";
 
-function Details({ yup, formik }) {
+function Details({ yup, formik, isAcquistare }) {
   return (
     <div className=" bg-gray-200 rounded-lg shadow-lg pb-12">
       <div className="flex justify-between items-center p-4 mb-6">
@@ -28,7 +28,14 @@ function Details({ yup, formik }) {
       <div className="flex flex-col  items-center mb-2">
         <div className="col-span ">
           <div className="text-center mb-4 text-xl font-normal">
-            Cosa ti piacerebbe vendere?
+            {isAcquistare ? (
+              <p>
+                Cosa ti piacerebbe acquistare{" "}
+                <span className="text-red-700">*</span>
+              </p>
+            ) : (
+              <p> Cosa ti piacerebbe vendere?</p>
+            )}
           </div>
           <div className="w-full h-full border p-10 border-black rounded-lg ">
             <Checkbox

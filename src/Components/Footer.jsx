@@ -60,18 +60,6 @@ function Footerr() {
             </div>
           </div>
           <Footer.Divider />
-          <div className="w-full sm:flex sm:items-center pb-4 items-center sm:justify-between">
-            <Footer.Copyright
-              by="stocky"
-              href="/"
-              year={new Date().getFullYear()}
-            />
-            <div className="mt-4 flex items-center space-x-6 sm:mt-0 sm:justify-center">
-              <Footer.Icon href="https://facebook.com/" icon={BsFacebook} />
-              <Footer.Icon href="https://instagram.com" icon={BsInstagram} />
-              <Footer.Icon href="https://tweeter.com" icon={BsTwitter} />
-            </div>
-          </div>
         </div>
       </Footer>
     </div>

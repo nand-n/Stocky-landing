@@ -82,21 +82,18 @@ function UserPrivacy() {
               <li>
                 Quando è richiesto dalla legge o per rispettare obblighi legali.
               </li>
+              <li>Protezione delle Informazioni Personali.</li>
+              <li>
+                Forniamo misure di sicurezza appropriate per proteggere le
+                informazioni personali raccolte da accessi non autorizzati,
+                perdite, alterazioni o divulgazioni. Tuttavia, nessun sistema di
+                sicurezza può essere garantito al 100%.
+              </li>
             </ul>
           </div>
+
           <div className="mb-4">
-            <h2 className="text-lg font-semibold mb-2">
-              4. Protezione delle Informazioni Personali
-            </h2>
-            <p>
-              Forniamo misure di sicurezza appropriate per proteggere le
-              informazioni personali raccolte da accessi non autorizzati,
-              perdite, alterazioni o divulgazioni. Tuttavia, nessun sistema di
-              sicurezza può essere garantito al 100%.
-            </p>
-          </div>
-          <div className="mb-4">
-            <h2 className="text-lg font-semibold mb-2">5. I tuoi Diritti</h2>
+            <h2 className="text-lg font-semibold mb-2">4. I tuoi Diritti</h2>
             <p>
               Hai diritto di accedere, correggere, cancellare o limitare l'uso
               delle tue informazioni personali. Puoi anche opporsi all'uso delle
@@ -107,7 +104,7 @@ function UserPrivacy() {
           </div>
           <div className="mb-4">
             <h2 className="text-lg font-semibold mb-2">
-              6. Cookie e Tecnologie Simili
+              5. Cookie e Tecnologie Simili
             </h2>
             <p>
               Il nostro sito web utilizza cookie e altre tecnologie simili per
@@ -118,7 +115,7 @@ function UserPrivacy() {
           </div>
           <div className="mb-4">
             <h2 className="text-lg font-semibold mb-2">
-              7. Modifiche all'Informativa sulla Privacy
+              6. Modifiche all'Informativa sulla Privacy
             </h2>
             <p>
               Ci riserviamo il diritto di aggiornare questa Informativa sulla
@@ -129,7 +126,7 @@ function UserPrivacy() {
             </p>
           </div>
           <div className="mb-4">
-            <h2 className="text-lg font-semibold mb-2">8. Contatti</h2>
+            <h2 className="text-lg font-semibold mb-2">7. Contatti</h2>
             <p>
               Se hai domande o preoccupazioni sulla nostra Informativa sulla
               Privacy o sulle tue informazioni personali, puoi contattarci

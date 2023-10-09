@@ -28,7 +28,6 @@ function Navbar() {
       window.addEventListener("scroll", handleScroll);
     };
   });
-
   const navItems = [
     {
       link: "Acquista",
