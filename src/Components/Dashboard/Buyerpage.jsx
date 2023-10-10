@@ -152,7 +152,9 @@ function BuyerrPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/buyer");
+        const response = await axios.get(
+          "https://stocky-back.onrender.com/api/v1/buyer"
+        );
         setData(response.data);
         setLoading(false); // Data has been loaded
       } catch (error) {

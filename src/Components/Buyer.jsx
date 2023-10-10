@@ -56,7 +56,7 @@ function Buyer() {
 
       axios({
         method: "POST",
-        url: `${URLst}buyer`,
+        url: "https://stocky-back.onrender.com/api/v1/buyer",
         data: data,
       })
         .then(function (res) {

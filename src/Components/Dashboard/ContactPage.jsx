@@ -122,7 +122,7 @@ function ContactPage() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/contact"
+          "https://stocky-back.onrender.com/api/v1/contact"
         );
         setData(response.data);
         setLoading(false); // Data has been loaded
