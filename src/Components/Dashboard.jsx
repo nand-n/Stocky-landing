@@ -8,17 +8,32 @@ function Dashboard() {
   const dummyData = {
     Projects: [
       {
-        name: "Project A",
+        name: "Customer A",
         startVariance: 3, // Replace with the desired start variance value
         finishVariance: 2, // Replace with the desired finish variance value
       },
       {
-        name: "Project B",
+        name: "Customer B",
         startVariance: null, // Replace with null if there's no start variance
         finishVariance: 5, // Replace with the desired finish variance value
       },
       {
-        name: "Project C",
+        name: "Customer C",
+        startVariance: 1, // Replace with the desired start variance value
+        finishVariance: null, // Replace with null if there's no finish variance
+      },
+      {
+        name: "Customer D",
+        startVariance: 1, // Replace with the desired start variance value
+        finishVariance: null, // Replace with null if there's no finish variance
+      },
+      {
+        name: "Customer E",
+        startVariance: 1, // Replace with the desired start variance value
+        finishVariance: null, // Replace with null if there's no finish variance
+      },
+      {
+        name: "Customer F",
         startVariance: 1, // Replace with the desired start variance value
         finishVariance: null, // Replace with null if there's no finish variance
       },
@@ -66,46 +81,26 @@ function Dashboard() {
             <div className="grid grid-cols-12 gap-4 mb-8">
               <div className="col-span-6 col-start-1 gap-4 space-y-8">
                 <div className="grid grid-cols-2 items-center mb-2">
-                  <div className="col-span-1">Total Cash On Hand</div>
+                  <div className="col-span-1">Stocky Total Profit</div>
                   <div className="col-span-1 text-white text-xl font-OpenSans font-extrabold bg-[#0F3A62] px-2 py-4 flex items-center justify-center rounded-lg shadow-lg">
-                    100,000
+                    100,000 EUR
                   </div>
                 </div>
                 <div className="grid grid-cols-2 items-center mb-2">
-                  <div className="col-span-1">Total Cash Variance</div>
+                  <div className="col-span-1">Stocky Total Cash</div>
                   <div className="col-span-1 text-white text-xl font-OpenSans font-extrabold bg-[#00C3DD] px-2 py-4 flex items-center justify-center rounded-lg shadow-lg">
-                    100,000
+                    100,000 EUR
                   </div>
-                </div>
-                <div className="flex gap-4 justify-center items-center">
-                  <button
-                    onClick={() => {}}
-                    className="p-3 bg-primary w-fit rounded-full text-white text-xs"
-                  >
-                    ETB
-                  </button>
-                  <button
-                    onClick={() => {}}
-                    className="p-3 bg-[#D9D9D9] w-fit rounded-full text-text text-xs"
-                  >
-                    AED
-                  </button>
-                  <button
-                    onClick={() => {}}
-                    className="p-3 bg-[#D9D9D9] w-fit rounded-full text-text text-xs"
-                  >
-                    USD
-                  </button>
                 </div>
               </div>
               <div className="col-span-6 col-start-7 shadow-md rounded-lg  bg-[#FFFFFF] pb-2">
                 <div className="w-full bg-[#ECF2F7] p-4 border rounded text-primary grid grid-cols-3  items-center">
-                  <div className="col-span-1 border-l-gray-400">Project </div>
+                  <div className="col-span-1 border-l-gray-400">Customer </div>
                   <div className="col-span-1 border-l-gray-400 border-l-2 pl-2">
-                    Start Variance
+                    Start
                   </div>
                   <div className="col-span-1 border-l-gray-400 border-l-2 pl-2">
-                    Finish Variance
+                    Finish
                   </div>
                 </div>
                 <div className="px-2 max-h-44 overflow  overflow-y-scroll space-y-1 mt-4">

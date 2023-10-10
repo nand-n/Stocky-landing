@@ -57,7 +57,7 @@ function Seller() {
 
       axios({
         method: "POST",
-        url: `${URLst}/buyer`,
+        url: `${URLst}seller`,
         data: data,
       })
         .then(function (res) {

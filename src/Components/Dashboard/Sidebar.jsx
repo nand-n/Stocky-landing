@@ -33,6 +33,12 @@ const Sidebar = () => {
       path: "buyerpage",
       icon: <MdLeaderboard />,
     },
+    {
+      key: "contacts",
+      label: "Contacts",
+      path: "contactpage",
+      icon: <MdLeaderboard />,
+    },
   ];
   return (
     <div className="hidden sm:flex flex-col col-span-1 md:col-span-2 px-2 md:px-4 py-6 bg-[#ECF2F7] text-[#0F3A62] overflow-hidden scrollbar-hide">

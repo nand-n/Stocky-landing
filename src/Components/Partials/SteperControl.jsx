@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import toast from "react-hot-toast";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -40,31 +41,16 @@ function SteperControl({ handleClick, currentStep, steps, formik, disable }) {
         <button
           type="button"
           onClick={() => {
-            //   handleClick("Continua");
-            //   if (currentStep === steps.length - 1) {
-            //     formik.handleSubmit();
-            //   }
-            // }}
-            formik.handleSubmit((values, actions) => {
-              // Your form submission logic goes here
-
-              // Only call handleClick if formik submission is successful
-              if (
-                actions.formik.isSubmitting === false &&
-                actions.formik.isValidating === false
-              ) {
-                // toast.success("Successfully Created", {
-                //   position: toast.POSITION.TOP_CENTER,
-                // });
-                // toast.success("Successfully Created!");
-                handleClick("Continua");
-              }
-            });
+            formik.handleSubmit((values, actions) => {});
           }}
           className={`${"bg-[#817ED3] hover:bg-indigo-900 "} bg-[#817ED3] text-white uppercase py-2 px-4 rounded-xl font-semibold cursor-pointer border-2 hover:text-white transition duration-200 ease-in-out  
   `}
         >
-          {currentStep === steps.length - 1 ? "Invia" : "null "}
+          {currentStep === steps.length - 1 ? (
+            "Invia"
+          ) : (
+            <AiOutlineCheckCircle />
+          )}
         </button>
       )}
     </div>
