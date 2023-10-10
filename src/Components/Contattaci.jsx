@@ -44,12 +44,11 @@ function Contattaci() {
 
       axios({
         method: "POST",
-        url: `${URLst}contact`,
+        url: "https://stocky-back.onrender.com/api/v1/contact",
         data: data,
       })
         .then(function (res) {
           console.log(res);
-          // toast.success("Successfully Created!");
           toast("Successfully Created");
         })
         .catch(function (res) {
