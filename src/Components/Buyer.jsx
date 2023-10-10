@@ -9,6 +9,10 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import Navbar from "./Partials/Navbar";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { URLst } from "../Common/url";
 
 export const BuyerSchema = Yup.object().shape({
   name: Yup.string().required("Name is Required!"),
@@ -17,7 +21,6 @@ export const BuyerSchema = Yup.object().shape({
   numeroditelefono: Yup.string(),
   nomeazienda: Yup.string(),
   sitoweb: Yup.string(),
-
   tutto: Yup.boolean(),
   abbigliamento: Yup.boolean(),
   cosmetica: Yup.boolean(),
@@ -48,6 +51,27 @@ function Buyer() {
     validationSchema: BuyerSchema,
     // validateOnChange: false,
     // validateOnBlur: false,
+    onSubmit: (data) => {
+      console.log(data);
+
+      axios({
+        method: "POST",
+        url: `${URLst}/buyer`,
+        data: data,
+      })
+        .then(function (res) {
+          console.log(res);
+          // toast.success("Successfully Created!");
+          toast("Successfully Created");
+        })
+        .then(() => {
+          handleClick("Continua");
+        })
+        .catch(function (res) {
+          console.log(res);
+          toast(`Error : ${res}`);
+        });
+    },
   });
   const [currentStep, setCurrentStep] = useState(1);
   const [userData, setUserData] = useState("");
@@ -90,6 +114,7 @@ function Buyer() {
     <div className="md:w-2/4 mx-auto shadow-sm rounded-2xl pb-2 bg-white pt-24 ">
       <Navbar />
       {/* Steper */}
+      <ToastContainer />
       <div className="container horizontal mt-0 ">
         <Steper steps={steps} currentStep={currentStep} />
       </div>
@@ -111,6 +136,7 @@ function Buyer() {
         handleClick={handleClick}
         currentStep={currentStep}
         steps={steps}
+        formik={formik}
         disable={disable}
       />
       <p className="litefont text-xs text-center px-8">

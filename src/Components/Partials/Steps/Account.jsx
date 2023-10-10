@@ -126,60 +126,34 @@ function Account({ yup, formik, isvenditore }) {
             Numero di telefono
           </label>
 
-          <TextInput
-            formik={formik}
-            name={"numeroditelefono"}
-            type={"number"}
-            className={
-              "border focus:outline-none px-4 text-[12px] text-black rounded-md border-[#D1D1D1] h-10"
-            }
-            errorClassName={
-              "border focus:outline-none px-4 text-[12px] text-black border-red-500 h-10"
-            }
-            errorDisplayClassName={"text-[12px] text-red-500"}
-          />
+          <div className="flex justify-between items-center">
+            <p
+              type="text"
+              // id="countryCode"
+              // name="countryCode"
+              // value={+251}
+              // onChange={onCountryCodeChange}
+              className=" focus:outline-none px-4 text-[12px] w-1/6  text-black rounded-md  h-9 active:none"
+              // placeholder="+"
+            >
+              +39
+            </p>
+            <TextInput
+              formik={formik}
+              name={"numeroditelefono"}
+              type={"number"}
+              className={
+                "w-5/6 border focus:outline-none px-4 text-[12px] text-black rounded-md border-[#D1D1D1] h-10"
+              }
+              errorClassName={
+                "border focus:outline-none px-4 text-[12px] text-black border-red-500 h-10"
+              }
+              errorDisplayClassName={"text-[12px] text-red-500"}
+            />
+          </div>
         </div>
       </div>
-      {/* <div className="grid  md:flex md:flex-cols-2 justify-between px-12 items-center mb-2">
-        <div className="flex w-full justify-start items-center ">
-          <div className="grid w-full md:mr-2  px-4 py-2  ">
-            <label htmlFor="state" className="text-[12px] text-[#1C1F1B]">
-              Nome azienda
-            </label>
-            <TextInput
-              formik={formik}
-              name={"nomeazienda"}
-              type={"text"}
-              className={
-                "border focus:outline-none w-full mr-4 text-[12px] text-black rounded-md border-[#D1D1D1] px-4 h-10"
-              }
-              errorClassName={
-                "border focus:outline-none px-12 text-[12px] text-black border-red-500 h-10"
-              }
-              errorDisplayClassName={"text-[12px] text-red-500"}
-            />
-          </div>
-        </div>
-        <div className="flex justify-start items-center w-full">
-          <div className="grid w-full md:ml-2 px-4 py-2  ">
-            <label htmlFor="state" className="text-[12px] text-[#1C1F1B]">
-              Sito web
-            </label>
-            <TextInput
-              formik={formik}
-              name={"sitoweb"}
-              type={"text"}
-              className={
-                "border focus:outline-none px-4 text-[12px] text-black rounded-md border-[#D1D1D1] h-10"
-              }
-              errorClassName={
-                "border focus:outline-none px-12 text-[12px] text-black border-red-500 h-10"
-              }
-              errorDisplayClassName={"text-[12px] text-red-500"}
-            />
-          </div>
-        </div>
-      </div> */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 mx-4 items-center mb-2">
         <div className="mb-2 md:mb-0">
           <label htmlFor="nomeazienda" className="text-[12px] text-[#1C1F1B]">
