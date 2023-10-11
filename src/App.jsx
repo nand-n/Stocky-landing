@@ -25,10 +25,10 @@ function App() {
           <Route path="/Contattaci" element={<Contattaci />} />
           <Route path="/privacyuser" element={<Privacy />} />
           <Route path="/privacy" element={<UserPrivacy />} />
-          <Route path="/dashbord/overview" element={<Dashboard />} />
-          <Route path="/dashbord/sellerpage" element={<SellerPage />} />
-          <Route path="/dashbord/buyerpage" element={<BuyerrPage />} />
-          <Route path="/dashbord/contactpage" element={<ContactPage />} />
+          <Route path="/dashboard/overview" element={<Dashboard />} />
+          <Route path="/dashboard/sellerpage" element={<SellerPage />} />
+          <Route path="/dashboard/buyerpage" element={<BuyerrPage />} />
+          <Route path="/dashboard/contactpage" element={<ContactPage />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>

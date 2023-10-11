@@ -137,7 +137,7 @@ function ContactPage() {
     <Layout>
       <div className="p-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold mb-4">Buyer Page</h1>
+          <h1 className="text-2xl font-semibold mb-4">Contacts Page</h1>
 
           <button className="btnprimary" onClick={handleDownload}>
             <BsDownload size="24" color="white" />
@@ -150,11 +150,11 @@ function ContactPage() {
         ) : error ? (
           <p>Error: {error.message}</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-16">
             {dummySellers.map((seller) => (
               <div
                 key={seller.id}
-                className="bg-white shadow-lg rounded p-4 hover:shadow-xl transition duration-300"
+                className="bg-white shadow-lg rounded p-4 hover:shadow-xl transition duration-300  overflow-hidden"
               >
                 <h2 className="text-xl font-semibold">
                   Name : {seller.cognome}

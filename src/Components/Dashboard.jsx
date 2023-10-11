@@ -52,7 +52,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="mt-[29px] grid grid-cols-3 justify-start gap-5">
-            <div className="bg-bg rounded px-[38px] col-span-1 py-[22px] h-[96px] flex items-center border-b-[4px] border-[#96DAFF] justify-between container mx-auto">
+            <div className="bg-bg rounded px-[38px] col-span-1 py-[22px] h-[96px] flex items-center border-b-[4px] border-[#817ED3] justify-between container mx-auto">
               <div className="grid">
                 <h1 className="text-primary text-[35px] font-OpenSans">500</h1>
                 <div className="h2 text-[14px] text-text">Total Customers</div>
@@ -60,7 +60,7 @@ function Dashboard() {
 
               <MdBallot className="text-primary w-[25px] h-[25px]" />
             </div>
-            <div className="bg-bg rounded px-[38px] py-[22px] h-[96px] col-span-1 flex items-center border-b-[4px] border-[#96DAFF] justify-between max-w-5xl container mx-auto">
+            <div className="bg-bg rounded px-[38px] py-[22px] h-[96px] col-span-1 flex items-center border-b-[4px] border-[#817ED3] justify-between max-w-5xl container mx-auto">
               <div className="grid">
                 <h1 className="text-success text-[35px] font-OpenSans">200</h1>
                 <div className="h2 text-[14px] text-text">Total Buyers</div>
@@ -68,7 +68,7 @@ function Dashboard() {
 
               <BsFillCheckCircleFill className="text-success w-[25px] h-[25px]" />
             </div>
-            <div className="bg-bg rounded px-[38px] py-[22px] h-[96px] col-span-1 flex items-center border-b-[4px] border-[#96DAFF] justify-between max-w-5xl container mx-auto">
+            <div className="bg-bg rounded px-[38px] py-[22px] h-[96px] col-span-1 flex items-center border-b-[4px] border-[#817ED3] justify-between max-w-5xl container mx-auto">
               <div className="grid">
                 <h1 className="text-warning text-[35px] font-OpenSans">300</h1>
                 <div className="h2 text-[14px] text-text">Total Sellers</div>
@@ -88,7 +88,7 @@ function Dashboard() {
                 </div>
                 <div className="grid grid-cols-2 items-center mb-2">
                   <div className="col-span-1">Stocky Total Cash</div>
-                  <div className="col-span-1 text-white text-xl font-OpenSans font-extrabold bg-[#00C3DD] px-2 py-4 flex items-center justify-center rounded-lg shadow-lg">
+                  <div className="col-span-1 text-white text-xl font-OpenSans font-extrabold bg-[#817ED3] px-2 py-4 flex items-center justify-center rounded-lg shadow-lg">
                     100,000 EUR
                   </div>
                 </div>

@@ -191,16 +191,27 @@ function SellerPage() {
             </button>{" "}
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-16">
             {dataSeller.map((seller) => (
               <div
                 key={seller.id}
-                className="bg-white shadow-lg rounded p-4 hover:shadow-xl transition duration-300"
+                className="bg-white shadow-lg rounded p-4 hover:shadow-xl transition duration-300 overflow-hidden"
               >
                 <h2 className="text-xl font-semibold">{seller.cognome}</h2>
                 <div className="mt-4">
                   <p className="text-gray-600">
-                    <strong>Email:</strong> {seller.email}
+                    <strong>Email:</strong>{" "}
+                    <span
+                      style={{
+                        maxWidth: "200px",
+                        display: "block",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {seller.email}
+                    </span>
                   </p>
                   <p className="text-gray-600">
                     <strong>Phone:</strong> {seller.numeroditelefono}

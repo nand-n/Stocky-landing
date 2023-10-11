@@ -133,7 +133,7 @@ function Account({ yup, formik, isvenditore }) {
               // name="countryCode"
               // value={+251}
               // onChange={onCountryCodeChange}
-              className=" focus:outline-none px-4 text-[12px] w-1/6  text-black rounded-md  h-9 active:none"
+              className=" focus:outline-none px-1 md:px-4 text-[12px] w-1/6  text-black rounded-md  h-9 active:none"
               // placeholder="+"
             >
               +39

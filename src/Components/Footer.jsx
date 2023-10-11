@@ -7,7 +7,7 @@ function Footerr() {
   return (
     <div>
       <Footer>
-        <div className="w-screen">
+        <div className="w-screen px-4 md:14">
           <div className="grid w-full justify-between items-center sm:flex sm:justify-between md:flex md:grid-cols-1">
             <div className="space-y-4 mb-8 ">
               <a href="/">

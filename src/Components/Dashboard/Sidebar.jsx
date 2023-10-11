@@ -1,19 +1,26 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
 import Logo from "../../assets/Images/stocky.png";
 // import { LAYOUT_LINKS } from "./Links";
 import { IoIosCash } from "react-icons/io";
 
-import { GrOverview } from "react-icons/gr";
+import { GrClose, GrOverview } from "react-icons/gr";
 import { MdLeaderboard } from "react-icons/md";
+import { HiMenuAlt1 } from "react-icons/hi";
 
 const linkClasses =
   "flex items-center gap-2 px-3 py-2 font-medium hover:no-underline h-14";
 
 const Sidebar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const LAYOUT_LINKS = [
     {
       key: "overview",
@@ -41,14 +48,34 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="hidden sm:flex flex-col col-span-1 md:col-span-2 px-2 md:px-4 py-6 bg-[#ECF2F7] text-[#0F3A62] overflow-hidden scrollbar-hide">
-      <Link
-        to="/"
-        className="flex flex-col justify-center items-center gap-2 py-2"
+    <div className="sm:flex sm:flex-col md:col-span-2 px-2 md:px-4 py-6 bg-[#ECF2F7] text-[#0F3A62] overflow-hidden scrollbar-hide">
+      {/* Menu Button for only mobile devices */}
+      <div className="md:hidden">
+        <button
+          onClick={toggleMenu}
+          className="text-text-gray-700 focus:outline-none focus:text-gray-900"
+        >
+          {isMenuOpen ? (
+            <GrClose className="h-6 w-6 " />
+          ) : (
+            <HiMenuAlt1 className="h-6 w-6 " />
+          )}
+        </button>
+      </div>
+
+      {/* Sidebar links */}
+      <div
+        className={`sm:flex sm:flex-col py-3 flex-col gap-0.5 text-sm ${
+          isMenuOpen ? "block" : "hidden"
+        }`}
       >
-        <img src={Logo} alt="IE logo" className="max-w-16 w-16" />
-      </Link>
-      <div className="flex-1 py-3 flex-col gap-0.5 text-sm">
+        <Link
+          to="/"
+          className="flex flex-col justify-center items-center gap-2 py-2"
+        >
+          {/* Replace 'Logo' with your actual logo */}
+          <img src={Logo} alt="Stocky logo" className="max-w-16 w-16" />
+        </Link>
         {LAYOUT_LINKS.map((item) => (
           <SidebarLink key={item.key} item={item} />
         ))}
@@ -61,16 +88,16 @@ function SidebarLink({ item }) {
   const { pathname } = useLocation();
   return (
     <Link
-      to={`/dashbord/${item.path}`}
+      to={`/dashboard/${item.path}`}
       className={classNames(
         pathname.includes(item.path)
-          ? "bg-[#96DAFF] px-6 text-[#0F3A62]"
+          ? "bg-[#817ED3] px-6 text-[#f2f9ff]"
           : "text-[#0F3A62] px-6 h-14",
         linkClasses
       )}
     >
       <span className="text-xl">{item.icon}</span>
-      <span className=" hidden lg:inline-block">{item.label}</span>
+      <span className="lg:inline-block">{item.label}</span>
     </Link>
   );
 }

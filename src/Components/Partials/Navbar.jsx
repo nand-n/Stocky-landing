@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import stocky_logo from "../../assets/Images/stocky.png";
 import stocky from "../../assets/Svg/stocky.svg";
@@ -72,7 +73,7 @@ function Navbar({ isHome }) {
 
           {/* btn for larger devices  */}
           <div className="space-x-12 hidden lg:flex items-center">
-            <HiMenuAlt1 size={24} />
+            {/* <HiMenuAlt1 size={24} /> */}
           </div>
           {/* Menu Button for only mobile devices */}
           <div className="md:hidden">
