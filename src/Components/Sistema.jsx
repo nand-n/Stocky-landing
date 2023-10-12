@@ -12,7 +12,7 @@ function Sistema() {
   return (
     <div
       className="pt-20 px-4 py-4 md:py-8 lg:px-14 mx-auto my-8 mt-28  bg-gray-50 "
-      id="contattaci"
+      id="sistema"
     >
       <div className="flex justify-center">
         <div className="fonty text-2xl md:text-4xl lg:text-6xl text-neutralGray font-semibold mb-4 md:mb-8 text-center">

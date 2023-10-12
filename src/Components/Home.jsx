@@ -4,6 +4,7 @@ import Hero from "./Partials/Hero";
 import About from "./About";
 import Sistema from "./Sistema";
 import Footerr from "./Footer";
+import Contattaci from "./Contattaci";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Hero />
         <About />
         <Sistema />
+        <Contattaci />
         <Footerr />
       </div>
     </>

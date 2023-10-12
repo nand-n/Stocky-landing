@@ -11,6 +11,8 @@ function BuyerrPage() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  console.log("dummySeller", dummySellers);
+
   const handleDownload = () => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet(`Buyers `);

@@ -33,7 +33,7 @@ function Details({ yup, formik, isvenditore }) {
             {isvenditore ? (
               <p>Cosa ti piacerebbe Venditore? </p>
             ) : (
-              <p> Cosa ti piacerebbe Acquistare *</p>
+              <p> Cosa ti piacerebbe Acquistare?</p>
             )}
           </div>
           <div className="w-full h-full border p-10 border-black rounded-lg ">

@@ -39,6 +39,10 @@ function Navbar({ isHome }) {
       path: "vendi",
     },
     {
+      link: "Sistema",
+      path: "sistema",
+    },
+    {
       link: "Contattaci",
       path: "contattaci",
     },

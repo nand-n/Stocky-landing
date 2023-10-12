@@ -59,9 +59,11 @@ function Contattaci() {
   });
   return (
     <>
-      <Navbar />
       <ToastContainer />
-      <div className="md:w-2/4 mx-auto shadow-sm rounded-2xl pb-2 bg-white pt-24 ">
+      <div
+        className="md:w-2/4  md:h-3/4 mx-auto shadow-sm rounded-2xl pb-2 bg-white pt-8 "
+        id="contattaci"
+      >
         <div className="bg-gray-200 rounded-lg shadow-lg pb-12">
           <div className="grid   items-center p-4 mb-6">
             <div className="fonty flex justify-center items-center text-center text-3xl text-black font-semibold mb-3">
