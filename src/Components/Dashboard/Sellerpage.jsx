@@ -5,12 +5,17 @@ import { BsDownload } from "react-icons/bs";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { URLst } from "../../Common/url";
+import { toast, ToastContainer } from "react-toastify";
+import { DeleteButtonWithModal } from "../DeleteBtnModal";
+import { AiFillDelete } from "react-icons/ai";
 
 function SellerPage() {
   // Initialize state to store seller data
   const [dataSeller, setDataSeller] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [id, setId] = useState();
 
   const handleDownload = () => {
     const workbook = new ExcelJS.Workbook();
@@ -164,9 +169,29 @@ function SellerPage() {
     }
     fetchData();
   }, []);
+
+  const handleDelete = async () => {
+    try {
+      // Send a delete request to your API
+      await axios.delete(
+        `https://stocky-back.onrender.com/api/v1/seller/${id}`
+      );
+      // Show success toast message
+      // setDataSeller((dataSeller) => dataSeller.filter((id) => id.id != id));
+      setDataSeller((prevData) =>
+        prevData.filter((seller) => seller.id !== id)
+      );
+      toast.success("Item deleted successfully");
+    } catch (error) {
+      // Handle the error and show an error toast message
+      console.error("Error deleting item:", error);
+      toast.error("An error occurred while deleting the item");
+    }
+  };
   return (
     <Layout>
-      <div className="p-4">
+      <ToastContainer />
+      <div className="p-4 relative">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-semibold mb-4">Seller Page</h1>
 
@@ -192,12 +217,29 @@ function SellerPage() {
           </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-16">
+            <DeleteButtonWithModal
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
+              handleDelete={handleDelete}
+            />
             {dataSeller.map((seller) => (
               <div
                 key={seller.id}
                 className="bg-white shadow-lg rounded p-4 hover:shadow-xl transition duration-300 overflow-hidden"
               >
-                <h2 className="text-xl font-semibold">{seller.cognome}</h2>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-xl font-semibold">{seller.cognome}</h2>
+                  <button
+                    onClick={() => {
+                      setIsModalOpen(true);
+                      setId(seller.id);
+                    }}
+                    className=""
+                  >
+                    <AiFillDelete className="text-red-500 hover:text-red-700" />
+                  </button>
+                </div>
+
                 <div className="mt-4">
                   <p className="text-gray-600">
                     <strong>Email:</strong>{" "}
